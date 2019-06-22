@@ -1,0 +1,119 @@
+﻿<Window x:Class="Cryptogram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cryptogram"
+        mc:Ignorable="d"
+        Title="Cryptogram" Height="450" Width="815" ResizeMode="CanMinimize">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="540*"/>
+            <ColumnDefinition Width="269*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+            <TabItem Header="Rot13">
+                <Grid>
+                    <TextBox x:Name="Message" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0"/>
+                    <TextBox x:Name="Rot13_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,0,0"/>
+                    <Button x:Name="Encrypt" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt_Click"/>
+                    <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear_Click"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="ROT13" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Caesar">
+                <Grid>
+                    <TextBox x:Name="Message2" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0"/>
+                    <TextBox x:Name="Caesarcipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,-7,0"/>
+                    <Button x:Name="Encrypt2" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt2_Click"/>
+                    <Button x:Name="Clear2" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear2_Click"/>
+                    <Label Content="Key: " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,2,0,0" Height="19"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength2" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength2" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="Caesar" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                    <TextBox x:Name="Keycaesar_TextBox" Padding="2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="199,0,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Play Fair">
+                <Grid>
+                    <TextBox x:Name="Message3" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0"/>
+                    <TextBox x:Name="PlayFaircipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,-7,0"/>
+                    <Button x:Name="Encrypt3" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt3_Click"/>
+                    <Button x:Name="Clear3" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear3_Click"/>
+                    <Label Content="Key: " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,2,0,0" Height="19"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength3" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength3" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="Playfair" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="671,3,0,0" Height="42" Width="114"/>
+                    <TextBox x:Name="Keyplayfair_TextBox" Padding="2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="199,0,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Decimal">
+                <Grid>
+                    <TextBox x:Name="Message4" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0"/>
+                    <TextBox x:Name="Decimalcipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,-7,0"/>
+                    <Button x:Name="Encrypt4" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt4_Click"/>
+                    <Button x:Name="Clear4" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear4_Click"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength4" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength4" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="DEC" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Octal">
+                <Grid>
+                    <TextBox x:Name="Message5" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="Octalcipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,0,0"/>
+                    <Button x:Name="Encrypt5" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt5_Click"/>
+                    <Button x:Name="Clear5" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear5_Click"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength5" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66" RenderTransformOrigin="2.315,0.263"/>
+                    <Label x:Name="CipherLength5" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="OCT" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Hexadecimal">
+                <Grid>
+                    <TextBox x:Name="Message6" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="Hexadecimalcipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,-7,0"/>
+                    <Button x:Name="Encrypt6" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt6_Click"/>
+                    <Button x:Name="Clear6" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear6_Click"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength6" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength6" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="HEX" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Binary">
+                <Grid>
+                    <TextBox x:Name="Message7" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="10,50,0,0"/>
+                    <TextBox x:Name="Binarycipher_TextBox" HorizontalAlignment="Left" Height="326" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Margin="405,50,-7,0"/>
+                    <Button x:Name="Encrypt7" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,2,0,0" Click="Encrypt7_Click"/>
+                    <Button x:Name="Clear7" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,2,0,0" Click="Clear7_Click"/>
+                    <Label Content="Type your text here :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,21,0,0" Width="380"/>
+                    <Label Content="Text length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,2,0,0" Height="19" Width="66"/>
+                    <Label Content="Cipher length " Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,2,0,0" Height="19" Width="80"/>
+                    <Label x:Name="TextLength7" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="405,26,0,0" Height="19" Width="66"/>
+                    <Label x:Name="CipherLength7" Content="0" Padding="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,26,0,0" Height="19" Width="80"/>
+                    <Label Content="BIN" Padding="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="685,3,0,0" Height="42" Width="100"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
