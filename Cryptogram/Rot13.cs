@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Cryptogram
 {
+    /// <summary>
+    /// ROT13 class contains method to generate cipher.
+    /// </summary>
     public static class Rot13
     {
         /// <summary>
-        /// Performs the ROT13 character rotation.
+        /// Transform method encrypts the text.
         /// </summary>
+        /// <returns>
+        /// The array of encrypted text.
+        /// </returns>
+        /// <param name="text">String of unencrypted characters.</param>
         public static string Transform(string text)
         {
             char[] array = text.ToCharArray();

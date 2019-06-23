@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace Cryptogram
 {
+    /// <summary>
+    /// Caesar cipher class contains method to generate cipher.
+    /// </summary>
     public static class Caesar_cipher
     {
         /// <summary>
-        /// Performs the Caesar cipher character rotation.
+        /// Transform method encrypts the text.
         /// </summary>
+        /// <returns>
+        /// String of encrypted text.
+        /// </returns>
+        /// <param name="text">String of unencrypted characters.</param>
+        /// <param name="key">Integer value to encrypt text.</param>
         public static string Transform(int key, string text)
         {
             int size = text.Length;

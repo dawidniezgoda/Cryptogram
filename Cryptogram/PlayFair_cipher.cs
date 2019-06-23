@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Cryptogram
 {
+    /// <summary>
+    /// PlayFair cipher class contains methods to generate cipher.
+    /// </summary>
     class PlayFair_cipher
     {
+
         private static int Mod(int a, int b)
         {
             return (a % b + b) % b;
